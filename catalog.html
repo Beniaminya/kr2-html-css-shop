@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Каталог комнатных растений учебного магазина Зелёный дом.">
+    <title>Каталог растений — Зелёный дом</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body id="top">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Зелёный дом</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Открыть меню">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+              <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+              <li class="nav-item"><a class="nav-link active" href="catalog.html" aria-current="page">Каталог</a></li>
+              <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+              <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+
+      <section class="mb-4" aria-labelledby="catalog-title">
+        <p class="section-label mb-2">Каталог</p>
+        <h1 class="display-6 fw-bold" id="catalog-title">Комнатные растения</h1>
+        <p class="lead text-secondary mb-0">Четыре неприхотливых растения для дома, рабочего стола или подарка.</p>
+      </section>
+
+      <div class="row g-4 align-items-start">
+        <aside class="col-12 col-lg-3">
+          <form class="card catalog-filters shadow-sm" id="catalog-filters">
+            <div class="card-body p-4">
+              <h2 class="h5 card-title mb-3">Фильтры</h2>
+              <div class="mb-3">
+                <label class="form-label" for="catalog-search">Название</label>
+                <div class="input-group">
+                  <span class="input-group-text">Поиск</span>
+                  <input class="form-control" id="catalog-search" name="search" type="search" placeholder="Например, фикус">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="catalog-category">Категория</label>
+                <select class="form-select" id="catalog-category" name="category">
+                  <option value="">Все категории</option>
+                  <option value="large">Крупные растения</option>
+                  <option value="easy">Неприхотливые</option>
+                  <option value="small">Для рабочего стола</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="catalog-price">Цена до</label>
+                <select class="form-select" id="catalog-price" name="price">
+                  <option value="">Любая цена</option>
+                  <option value="1000">1 000 руб.</option>
+                  <option value="1600">1 600 руб.</option>
+                  <option value="2000">2 000 руб.</option>
+                  <option value="2500">2 500 руб.</option>
+                </select>
+              </div>
+              <button class="btn btn-outline-secondary w-100" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </aside>
+
+        <section class="col-12 col-lg-9" aria-labelledby="products-title">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h4 mb-0" id="products-title">Товары</h2>
+            <span class="text-secondary">Найдено: <strong id="result-count">4</strong></span>
+          </div>
+
+          <div class="alert alert-warning d-none" id="catalog-empty" role="status">По выбранным условиям товары не найдены. Измените фильтры.</div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col catalog-product" data-name="монстера" data-category="large" data-price="2400">
+              <article class="card product-card h-100 shadow-sm position-relative">
+                <span class="badge text-bg-success">Хит</span>
+                <img class="card-img-top" src="images/monstera.jpg" alt="Монстера в бежевом горшке">
+                <div class="card-body d-flex flex-column p-4">
+                  <p class="product-card__category mb-2">Крупные растения</p>
+                  <h3 class="h5 card-title">Монстера</h3>
+                  <p class="card-text text-secondary">Крупные резные листья и выразительный силуэт для светлой комнаты.</p>
+                  <p class="fs-5 fw-bold mt-auto mb-3">2 400 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-outline-success" href="product.html">Подробнее</a>
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="monstera">Заказать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col catalog-product" data-name="фикус" data-category="easy" data-price="1800">
+              <article class="card product-card h-100 shadow-sm position-relative">
+                <span class="badge text-bg-primary">Новинка</span>
+                <img class="card-img-top" src="images/ficus.jpg" alt="Фикус в терракотовом горшке">
+                <div class="card-body d-flex flex-column p-4">
+                  <p class="product-card__category mb-2">Неприхотливые</p>
+                  <h3 class="h5 card-title">Фикус</h3>
+                  <p class="card-text text-secondary">Компактное растение с плотными тёмно-зелёными листьями.</p>
+                  <p class="fs-5 fw-bold mt-auto mb-3">1 800 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-outline-success" href="product.html">Подробнее</a>
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="ficus">Заказать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col catalog-product" data-name="сансевиерия" data-category="easy" data-price="1500">
+              <article class="card product-card h-100 shadow-sm position-relative">
+                <span class="badge text-bg-warning">Лёгкий уход</span>
+                <img class="card-img-top" src="images/sansevieria.jpg" alt="Сансевиерия в светлом горшке">
+                <div class="card-body d-flex flex-column p-4">
+                  <p class="product-card__category mb-2">Неприхотливые</p>
+                  <h3 class="h5 card-title">Сансевиерия</h3>
+                  <p class="card-text text-secondary">Выносливое растение, которое спокойно переносит редкий полив.</p>
+                  <p class="fs-5 fw-bold mt-auto mb-3">1 500 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-outline-success" href="product.html">Подробнее</a>
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="sansevieria">Заказать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col catalog-product" data-name="кактус" data-category="small" data-price="900">
+              <article class="card product-card h-100 shadow-sm position-relative">
+                <span class="badge text-bg-danger">Скидка</span>
+                <img class="card-img-top" src="images/cactus.jpg" alt="Небольшой кактус в керамическом горшке">
+                <div class="card-body d-flex flex-column p-4">
+                  <p class="product-card__category mb-2">Для рабочего стола</p>
+                  <h3 class="h5 card-title">Кактус</h3>
+                  <p class="card-text text-secondary">Небольшое растение для солнечного подоконника или рабочего места.</p>
+                  <p class="fs-5 fw-bold mt-auto mb-3"><span class="old-price me-2">1 100 руб.</span>900 руб.</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-outline-success" href="product.html">Подробнее</a>
+                    <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#order-modal" data-product="cactus">Заказать</button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <nav class="mt-4" aria-label="Страницы каталога">
+            <ul class="pagination justify-content-center mb-0">
+              <li class="page-item disabled"><span class="page-link">Назад</span></li>
+              <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+              <li class="page-item disabled"><span class="page-link">Вперёд</span></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-5"><p class="h5">Зелёный дом</p><p class="mb-0">Учебный интернет-магазин комнатных растений.</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="fw-bold mb-2">Контакты</p><p class="mb-1">+7 (495) 123-45-67</p><p class="mb-0">hello@green-home.example</p></div>
+          <div class="col-12 col-sm-6 col-lg-4">
+            <nav class="d-flex flex-column gap-2" aria-label="Дополнительная навигация"><a href="index.html#advantages">Преимущества</a><a href="index.html#popular">Популярные растения</a><a href="contacts.html">Контакты</a></nav>
+          </div>
+        </div>
+        <hr class="border-light opacity-25 my-4">
+        <p class="small mb-0">© 2026 Учебный проект. Полянский Алексей, ЭФБО-01-25.</p>
+      </div>
+    </footer>
+
+    <a class="btn btn-success btn-sm position-fixed back-to-top" href="#top">Наверх</a>
+
+    <div class="modal fade" id="order-modal" tabindex="-1" aria-labelledby="order-modal-title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="order-modal-title">Быстрая заявка</h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-success d-none" id="modal-success" role="status">Заявка принята. Мы скоро свяжемся с вами.</div>
+            <form class="needs-validation" action="#" method="post" data-success="modal-success" novalidate>
+              <div class="mb-3">
+                <label class="form-label" for="modal-name">Имя</label>
+                <input class="form-control" id="modal-name" name="name" type="text" minlength="2" required>
+                <div class="invalid-feedback">Введите имя.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="modal-email">E-mail</label>
+                <input class="form-control" id="modal-email" name="email" type="email" required>
+                <div class="invalid-feedback">Введите корректный e-mail.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="modal-phone">Телефон</label>
+                <div class="input-group">
+                  <span class="input-group-text">+7</span>
+                  <input class="form-control" id="modal-phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="9991234567" required>
+                  <div class="invalid-feedback">Введите 10 цифр после +7.</div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="modal-product">Растение</label>
+                <select class="form-select" id="modal-product" name="product" required>
+                  <option value="">Выберите растение</option>
+                  <option value="monstera">Монстера</option>
+                  <option value="ficus">Фикус</option>
+                  <option value="sansevieria">Сансевиерия</option>
+                  <option value="cactus">Кактус</option>
+                </select>
+                <div class="invalid-feedback">Выберите растение.</div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" id="modal-agreement" name="agreement" type="checkbox" required>
+                <label class="form-check-label" for="modal-agreement">Я согласен на обработку данных</label>
+                <div class="invalid-feedback">Необходимо подтвердить согласие.</div>
+              </div>
+              <button class="btn btn-success" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

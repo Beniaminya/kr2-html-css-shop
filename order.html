@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Форма заявки на комнатное растение в учебном магазине Зелёный дом.">
+    <title>Оформление заявки — Зелёный дом</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body id="top">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Зелёный дом</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+              <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+              <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+              <li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Заявка</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Заявка</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4 g-lg-5 align-items-start">
+        <section class="col-12 col-lg-8" aria-labelledby="order-title">
+          <p class="section-label mb-2">Заявка</p>
+          <h1 class="display-6 fw-bold" id="order-title">Заказать растение</h1>
+          <p class="lead text-secondary">Заполните форму, и сотрудник учебного магазина свяжется с вами для уточнения деталей.</p>
+
+          <div class="alert alert-info" role="note"><strong>Обратите внимание:</strong> форма демонстрационная и не отправляет данные на сервер.</div>
+          <div class="alert alert-success d-none" id="order-success" role="status"><strong>Заявка принята.</strong> Это демонстрационное сообщение об успешной отправке.</div>
+
+          <form class="card shadow-sm needs-validation" action="#" method="post" data-success="order-success" novalidate>
+            <div class="card-body p-4">
+              <div class="row g-3">
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="order-name">Имя</label>
+                  <input class="form-control" id="order-name" name="name" type="text" minlength="2" autocomplete="given-name" required>
+                  <div class="invalid-feedback">Введите имя длиной не менее двух символов.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="order-email">E-mail</label>
+                  <input class="form-control" id="order-email" name="email" type="email" autocomplete="email" required>
+                  <div class="invalid-feedback">Введите корректный e-mail.</div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="order-phone">Телефон</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+7</span>
+                    <input class="form-control" id="order-phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" placeholder="9991234567" autocomplete="tel" required>
+                    <div class="invalid-feedback">Введите 10 цифр после +7.</div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="order-date">Желаемая дата связи</label>
+                  <input class="form-control" id="order-date" name="date" type="date">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="order-product">Выбранное растение</label>
+                  <select class="form-select" id="order-product" name="product" required>
+                    <option value="">Выберите растение</option>
+                    <option value="monstera">Монстера — 2 400 руб.</option>
+                    <option value="ficus">Фикус — 1 800 руб.</option>
+                    <option value="sansevieria">Сансевиерия — 1 500 руб.</option>
+                    <option value="cactus">Кактус — 900 руб.</option>
+                  </select>
+                  <div class="invalid-feedback">Выберите растение.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="order-delivery">Способ получения</label>
+                  <select class="form-select" id="order-delivery" name="delivery" required>
+                    <option value="">Выберите способ</option>
+                    <option value="courier">Доставка курьером</option>
+                    <option value="pickup">Самовывоз</option>
+                  </select>
+                  <div class="invalid-feedback">Выберите способ получения.</div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="order-comment">Комментарий</label>
+                  <textarea class="form-control" id="order-comment" name="comment" rows="4" placeholder="Например, удобное время для звонка"></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" id="order-agreement" name="agreement" type="checkbox" required>
+                    <label class="form-check-label" for="order-agreement">Я согласен на обработку данных</label>
+                    <div class="invalid-feedback">Необходимо подтвердить согласие.</div>
+                  </div>
+                </div>
+                <div class="col-12 d-flex flex-wrap gap-2">
+                  <button class="btn btn-success" type="submit">Отправить заявку</button>
+                  <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <aside class="col-12 col-lg-4">
+          <div class="card shadow-sm mb-4">
+            <div class="card-body p-4">
+              <h2 class="h5 card-title">Как оформить заказ</h2>
+              <ol class="mb-0 ps-3">
+                <li class="mb-2">Заполните контактные данные.</li>
+                <li class="mb-2">Выберите растение и способ получения.</li>
+                <li>Дождитесь звонка для подтверждения.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="card border-success">
+            <div class="card-body p-4">
+              <span class="badge text-bg-success mb-2">Помощь</span>
+              <h2 class="h5 card-title">Есть вопрос по уходу?</h2>
+              <p class="card-text text-secondary">Напишите нам перед оформлением заявки — подскажем подходящее растение.</p>
+              <a class="btn btn-outline-success" href="contacts.html#feedback">Задать вопрос</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-5"><p class="h5">Зелёный дом</p><p class="mb-0">Учебный интернет-магазин комнатных растений.</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="fw-bold mb-2">Контакты</p><p class="mb-1">+7 (495) 123-45-67</p><p class="mb-0">hello@green-home.example</p></div>
+          <div class="col-12 col-sm-6 col-lg-4"><nav class="d-flex flex-column gap-2" aria-label="Дополнительная навигация"><a href="index.html#advantages">Преимущества</a><a href="index.html#popular">Популярные растения</a><a href="contacts.html">Контакты</a></nav></div>
+        </div>
+        <hr class="border-light opacity-25 my-4">
+        <p class="small mb-0">© 2026 Учебный проект. Полянский Алексей, ЭФБО-01-25.</p>
+      </div>
+    </footer>
+
+    <a class="btn btn-success btn-sm position-fixed back-to-top" href="#top">Наверх</a>
+  </body>
+</html>

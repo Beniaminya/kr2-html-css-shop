@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Вымышленные контакты и форма обратной связи учебного магазина Зелёный дом.">
+    <title>Контакты — Зелёный дом</title>
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body id="top">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Зелёный дом</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation" aria-controls="main-navigation" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-1">
+              <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+              <li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li>
+              <li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li>
+              <li class="nav-item"><a class="nav-link" href="order.html">Заявка</a></li>
+              <li class="nav-item"><a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container py-4 py-lg-5">
+      <nav aria-label="Хлебные крошки">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+        </ol>
+      </nav>
+
+      <section class="mb-5" aria-labelledby="contacts-title">
+        <p class="section-label mb-2">Контакты</p>
+        <h1 class="display-6 fw-bold" id="contacts-title">Как с нами связаться</h1>
+        <p class="lead text-secondary">Все данные на странице вымышлены и используются только для учебного проекта.</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-1">
+          <div class="col">
+            <article class="card contact-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <span class="badge text-bg-success mb-3">Телефон</span>
+                <h2 class="h5"><a href="tel:+74951234567">+7 (495) 123-45-67</a></h2>
+                <p class="text-secondary mb-0">Ежедневно с 10:00 до 20:00</p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card contact-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <span class="badge text-bg-success mb-3">E-mail</span>
+                <h2 class="h5"><a href="mailto:hello@green-home.example">hello@green-home.example</a></h2>
+                <p class="text-secondary mb-0">Ответим в течение рабочего дня</p>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card contact-card h-100 shadow-sm">
+              <div class="card-body p-4">
+                <span class="badge text-bg-success mb-3">Адрес</span>
+                <h2 class="h5">г. Москва, ул. Зелёная, д. 15</h2>
+                <p class="text-secondary mb-0">Учебный вымышленный адрес</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 g-lg-5 align-items-stretch mb-5" aria-labelledby="location-title">
+        <div class="col-12 col-lg-5">
+          <div class="h-100 d-flex flex-column justify-content-center">
+            <p class="section-label mb-2">Самовывоз</p>
+            <h2 id="location-title">Пункт выдачи</h2>
+            <p class="text-secondary">Заказ можно забрать ежедневно с 10:00 до 20:00 после подтверждения сотрудником.</p>
+            <ul class="list-group list-group-flush rounded shadow-sm">
+              <li class="list-group-item d-flex justify-content-between"><span>Понедельник–пятница</span><strong>10:00–20:00</strong></li>
+              <li class="list-group-item d-flex justify-content-between"><span>Суббота–воскресенье</span><strong>11:00–19:00</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="placeholder-map rounded-4 shadow-sm d-flex align-items-center justify-content-center text-center p-4 h-100" role="img" aria-label="Условная схема расположения магазина">
+            <div><p class="h4 mb-2">Условная схема</p><p class="mb-0 text-secondary">Метро «Зелёная» · выход №2 · 5 минут пешком</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row g-4 g-lg-5 align-items-start" id="feedback" aria-labelledby="feedback-title">
+        <div class="col-12 col-lg-5">
+          <p class="section-label mb-2">Обратная связь</p>
+          <h2 id="feedback-title">Задать вопрос</h2>
+          <p class="text-secondary">Если вы уже выбрали растение, можно сразу перейти на страницу заявки.</p>
+          <a class="btn btn-outline-success" href="order.html">Оформить заявку</a>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="alert alert-success d-none" id="feedback-success" role="status">Сообщение отправлено. Это демонстрационное уведомление.</div>
+          <form class="card shadow-sm needs-validation" action="#" method="post" data-success="feedback-success" novalidate>
+            <div class="card-body p-4">
+              <div class="mb-3">
+                <label class="form-label" for="feedback-name">Имя</label>
+                <input class="form-control" id="feedback-name" name="name" type="text" minlength="2" required>
+                <div class="invalid-feedback">Введите имя.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="feedback-email">E-mail</label>
+                <input class="form-control" id="feedback-email" name="email" type="email" required>
+                <div class="invalid-feedback">Введите корректный e-mail.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="feedback-topic">Тема</label>
+                <select class="form-select" id="feedback-topic" name="topic" required>
+                  <option value="">Выберите тему</option>
+                  <option value="care">Уход за растением</option>
+                  <option value="delivery">Доставка</option>
+                  <option value="other">Другой вопрос</option>
+                </select>
+                <div class="invalid-feedback">Выберите тему.</div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="feedback-message">Сообщение</label>
+                <textarea class="form-control" id="feedback-message" name="message" rows="5" required></textarea>
+                <div class="invalid-feedback">Введите сообщение.</div>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" id="feedback-agreement" name="agreement" type="checkbox" required>
+                <label class="form-check-label" for="feedback-agreement">Я согласен на обработку данных</label>
+                <div class="invalid-feedback">Необходимо подтвердить согласие.</div>
+              </div>
+              <button class="btn btn-success" type="submit">Отправить сообщение</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-lg-5"><p class="h5">Зелёный дом</p><p class="mb-0">Учебный интернет-магазин комнатных растений.</p></div>
+          <div class="col-12 col-sm-6 col-lg-3"><p class="fw-bold mb-2">Контакты</p><p class="mb-1">+7 (495) 123-45-67</p><p class="mb-0">hello@green-home.example</p></div>
+          <div class="col-12 col-sm-6 col-lg-4"><nav class="d-flex flex-column gap-2" aria-label="Дополнительная навигация"><a href="index.html#advantages">Преимущества</a><a href="index.html#popular">Популярные растения</a><a href="contacts.html">Контакты</a></nav></div>
+        </div>
+        <hr class="border-light opacity-25 my-4">
+        <p class="small mb-0">© 2026 Учебный проект. Полянский Алексей, ЭФБО-01-25.</p>
+      </div>
+    </footer>
+
+    <a class="btn btn-success btn-sm position-fixed back-to-top" href="#top">Наверх</a>
+  </body>
+</html>
